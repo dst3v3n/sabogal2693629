@@ -1,16 +1,11 @@
-#Determinar cuales y cuantos números perfectos hay entre 1 y
-#1000?
+#Determinar cuales y cuantos números perfectos hay entre 1 y 1000?
 
-sum=0
-divi=0
-cont=0
+ent=1001
 
-
-for i in range(1,1001):
-    for j in range(i):
-        if j%i==0 and i!=i:
-            divi=j
-            sum+=j
-        if sum-i==divi:
-            print(f"{i} Es un numero perfecto")
-print(f"El total de numeros perfectos son: {cont}")
+for i in range(1, ent):
+    b=0
+    for j in range(1, (i//2)+1):
+        if(i%j==0):
+            b+=j
+    if(b==i):
+        print("%s es perfecto" %i)
