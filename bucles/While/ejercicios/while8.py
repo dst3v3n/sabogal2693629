@@ -1,18 +1,28 @@
-#Sacar un numero aleatorio 1 a 100
-#Pedir al usuario que intente adivinar el numero
-#Es un numero pequeño
-#Es mas grande
+#Calcular la operación x n sin utilizar la función pow
 
-import random
+import math
 
-clave = int(random.random()*100)
-num1 = 1
+base = 1
+exponente = 1
 
-while num1!=clave:
-    num1 = abs(int(input("Digita el numero secreto: ")))
-    if num1>clave:
-        print("El numero es mas pequeño")
-    elif num1<clave:
-        print ("El numero es mas grande")
-    else: 
-        print(f"El numero es: {clave}")
+while base!=0:
+    base = int(input("Digita el numero Base: "))
+    exponente = int(input("Digita el exponente : "))
+    operacion = int(math.pow (base , exponente ))
+
+    print(f"El resultado de esa operacion es: {operacion}")
+
+
+base = 1
+exponente = 1
+
+while exponente!=0:
+    if base!=0:
+        base = int(input("Digita el numero Base: "))
+        exponente = int(input("Digita el exponente : "))
+        operacion = base**exponente
+
+    if exponente!=0:
+        print(f"El resultado de esa operacion es: {operacion}")
+    else:
+        print("Haz salido exitosamente")
