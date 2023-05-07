@@ -44,6 +44,14 @@ for i in range (len(lista2)):
             aux2=lista2[i]
             lista2[i]=lista2[j]
             lista2[j]=aux1       
+
+promedio1=suma1/len(lista1)
+promedio2=suma2/len(lista2)
+
+suma_total=suma1+suma2
+longitud=len(lista1)+len(lista2)
+promedio=suma_total/longitud
+
 menor1=lista1.pop(0)
 menor2=lista2.pop(0)
 mayor1=lista1.pop(-1)
@@ -56,7 +64,6 @@ elif menor1<menor2:
 else:
     print("Las listas tienen el mismo numero menor")
 
-
 if mayor1>mayor2:
     print(f"{mayor1} El numero mayor es el de la lista 1")
 elif mayor1<mayor2:
@@ -64,14 +71,7 @@ elif mayor1<mayor2:
 else:
     print("Las listas tienen el mismo numero mayor")
 
-suma_total=suma1+suma2
-longitud=len(lista1)+len(lista2)
-promedio=suma_total/longitud
-
 print(f"El promedio total de las dos listas es: {promedio}")
-
-promedio1=suma1/len(lista1)
-promedio2=suma2/len(lista2)
 
 if promedio1>promedio:
     print(f"El promedio de la lista 1 esta por encima del promedio total {promedio1}")

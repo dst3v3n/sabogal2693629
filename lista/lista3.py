@@ -5,6 +5,8 @@ suma=0
 sumae=0
 resta=[]
 elevado=[]
+mayor=0
+menor=100000
 print(lista)
 print(tam)
 for i in range(tam):
@@ -14,6 +16,12 @@ for i in range(tam):
             lista[i]=lista[j]
             lista[j]=aux
 print("Lista en orden",lista)
+
+for i in lista:
+    if i>mayor: 
+        mayor=i
+    if i<menor and i!=0:
+        menor=i
 
 if len(lista)%2==0:
     mediana = (lista[(tam // 2) - 1] + lista[tam // 2]) / 2
@@ -29,8 +37,6 @@ for i in lista:
     for f in lista:
         if i==f:
             cont+=1
-    if cont==1:
-        print("No hay moda, no hay datos repetidos")
     if cont>ind:
         ind=cont
         moda=i
@@ -51,3 +57,5 @@ print(f"La mediana de la lista es: {mediana}")
 print(f"la media de la lista es: {media}")
 print(f"La moda de la lista es: {moda}")
 print(f"La desviacion Estandar de la lista es: {ds}" )
+print(f"El numero menor de la lista es: {menor}")
+print(f"El numero mayor de la lista es: {mayor}")
