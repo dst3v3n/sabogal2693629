@@ -9,7 +9,9 @@
 import random
 
 lista=[float(random.randrange(6)) for i in range(random.randint(20,30))]
+#Random.inform(0,6)
 suma_repro=0
+suma_apro=0
 print(lista)
 
 for i in range(len(lista)):
@@ -36,12 +38,18 @@ reprobado=lista[:posicion]
 for i in lista:
     if i<3.0:
         suma_repro+=i
+    else:
+        suma_apro+=i
+
+promedio_apro=suma_apro/len(aprobado)
+promedio_repro=suma_repro/len(reprobado)
 
 print(f"Aprobados: {aprobado}")
 print(f"Reprobados: {reprobado}")
 print(f"Unidad 1: {unidad1}")
 print(f"Unidad 2: {unidad2}")
 print(f"Unidad 3: {unidad3}")
-print(f"Suma {suma_repro}")
+print(f"Promedio Repro {promedio_repro}")
+print(f"Promedio Apro {promedio_apro}")
 
 
