@@ -52,6 +52,18 @@ suma_total=suma1+suma2
 longitud=len(lista1)+len(lista2)
 promedio=suma_total/longitud
 
+for i in lista1:
+    if i%2==0:
+        par1+=1
+    else:
+        impar1+=1
+
+for i in lista2:
+    if i%2==0:
+        par2+=1
+    else:
+        impar2+=1
+
 menor1=lista1.pop(0)
 menor2=lista2.pop(0)
 mayor1=lista1.pop(-1)
@@ -83,17 +95,6 @@ if promedio2>promedio:
 else:
     print(f"El promedio de la lista 2 esta por debajo del promedio total {promedio2}")
 
-for i in lista1:
-    if i%2==0:
-        par1+=1
-    else:
-        impar1+=1
-
-for i in lista2:
-    if i%2==0:
-        par2+=1
-    else:
-        impar2+=1
 
 if par1>par2:
     print(f"{par1} Hay mas numeros par en la lista 1 ")
