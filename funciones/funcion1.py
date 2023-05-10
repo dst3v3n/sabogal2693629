@@ -8,13 +8,8 @@ def divisores (x):
         else:
             aux=i
             nodivi.append(aux)
-    print(f"El numeros divisibles de {x} son: {divi}")
-    print(f"Los numeros no divisibles de {x} son: {nodivi}")
+    return divi
 
+y=int(input("Digita un numero:  "))
 
-
-divisores(10)
-divisores(50)
-divisores(19)
-divisores(35)
-
+print(f"Los numeros divisores son", divisores(y))

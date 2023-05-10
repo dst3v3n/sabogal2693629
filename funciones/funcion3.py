@@ -13,7 +13,6 @@ def mame(x,y):
             print(f"EL NUMERO ES MAYOR ES: {y}")
             print(f"EL NUMERO ES MENOR ES: {x}")
 
-    return mame
 
 x=1
 y=1
