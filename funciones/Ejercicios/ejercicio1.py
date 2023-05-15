@@ -87,16 +87,6 @@ def buscarLista(lista,x):
     else:
         return "El numero no existe"
     
-def posicion (lista,x):
-    posicion=[]
-    for i in lista:
-        if i==x:
-            posicion.append(lista.index(i))
-            lista.remove(i)
-            lista.inset(i,15)
-            lista=posicion
-        return lista
-            
 
 lista=llenarLista(15,25)
 print(lista)
