@@ -87,13 +87,16 @@ def buscarLista(lista,x):
         return f"El numero existe {cont} veces"
     else:
         return "El numero no existe"
-
-def posicionLista (lista,x):
+    
+def posicion (lista,x):
     posicion=[]
-    for i in range (len(lista)):
-        if x==lista[i]:
-            posicion.append(i)
-    return posicion
+    for i in lista:
+        if i==x:
+            posicion.append(lista.index(i))
+            lista.remove(i)
+            lista.inset(i,15)
+            lista=posicion
+        return lista
             
 
 lista=llenarLista(15,25)
@@ -106,6 +109,7 @@ print(ordenAscen(lista))
 print(ordenDesce(lista))
 print(modaLista(lista))
 print(medianaLista(lista))
-num=abs(int(input("Digite un numero: ")))
+num=int(input("Digite un numero: "))
+posicion1=posicion(lista,num)
 print(buscarLista(lista,num))
-print(posicionLista(lista,num))
+print(posicion1)
