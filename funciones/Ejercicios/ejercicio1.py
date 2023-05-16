@@ -18,10 +18,10 @@ def llenarLista(tam,rango):
     return lista
 
 def sumaLista(lista):
-    sum=0
+    suma=0
     for x in lista:
-        sum+=x
-    return sum
+        suma+=x
+    return suma
 
 def promedioLista(lista):
     return sumaLista(lista)/len(lista)
@@ -48,6 +48,7 @@ def ordenAscen(lista):
                 lista[i]=lista[j]
                 lista[j]=aux 
     return lista
+
 def ordenDesce(lista):
     for i in range(len(lista)):
         for j in range(i+1,len(lista)):
@@ -83,19 +84,16 @@ def buscarLista(lista,x):
         for i in range(len(lista)):
             if x==lista[i]:
                 cont+=1
-        return f"El numero existe {cont}"
+        return f"El numero existe {cont} veces"
     else:
         return "El numero no existe"
-    
-def posicion (lista,x):
+
+def posicionLista (lista,x):
     posicion=[]
-    for i in lista:
-        if i==x:
-            posicion.append(lista.index(i))
-            lista.remove(i)
-            lista.inset(i,15)
-            lista=posicion
-        return lista
+    for i in range (len(lista)):
+        if x==lista[i]:
+            posicion.append(i)
+    return posicion
             
 
 lista=llenarLista(15,25)
@@ -108,7 +106,6 @@ print(ordenAscen(lista))
 print(ordenDesce(lista))
 print(modaLista(lista))
 print(medianaLista(lista))
-num=int(input("Digite un numero: "))
-posicion1=posicion(lista,num)
+num=abs(int(input("Digite un numero: ")))
 print(buscarLista(lista,num))
-print(posicion1)
+print(posicionLista(lista,num))
