@@ -222,6 +222,7 @@ print(ordenAscen(lista1))
 print(len(lista1))
 x=abs(int(input("Digita que quintil quieres hallar: ")))
 print(quintiles(lista1,x))
+
 ```
 >El codigo se encuentra **[Aqui](./funciones/funcion9.py)**
 
