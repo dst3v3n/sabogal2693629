@@ -231,7 +231,7 @@ while x!=0:
         print("Este numero es invalido")
 
 ```
->El codigo se encuentra **[Aqui](./funciones/funcion9.py)**
+>El codigo se encuentra **[Aqui](./funciones/funcion6.py)**
 
 ------
 ## Seguire aprendiendo mas acerca del mundo de python!. Este es solo el principio:earth_africa::purple_heart:
