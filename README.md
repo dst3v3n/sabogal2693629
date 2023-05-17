@@ -217,11 +217,18 @@ def quintiles(lista,valor):
         return f"No se puede hallar el quintil"
 
 lista1=llenarLista(100,1.79)
-
 print(ordenAscen(lista1))
 print(len(lista1))
-x=abs(int(input("Digita que quintil quieres hallar: ")))
-print(quintiles(lista1,x))
+x=1
+
+while x!=0:
+    x=abs(int(input("Digita que quintil quieres hallar: ")))
+    if x>=1 and x<=5:
+        print(quintiles(lista1,x))
+    elif x==0:
+        print("Haz salido correctamente del programa")
+    else:
+        print("Este numero es invalido")
 
 ```
 >El codigo se encuentra **[Aqui](./funciones/funcion9.py)**
