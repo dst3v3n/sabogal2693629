@@ -14,14 +14,14 @@
 
 |# Files | Topics                                                    |
 |------|:---------------------------------------------------------:|
-| 00  |  [Introduction](./intro)||
+| 00  |  [Introduction](./intro/intro1.py)||
 | 01  |  [Condicionales](./condicionales)|
 | 02  |  [Bucles](./bucles)
 | 03  |  [lista](./lista)|
 | 04  |  [funciones](./funciones)|
 
 --------
-## Ultimos codigos realizados
+## **Ultimos codigos realizados**
 
 ```python
 import random
@@ -184,7 +184,7 @@ while selector!=0:
         case "0":
             break
 ```
->El codigo se encuentra [Aqui](./funciones/funcion5.py)|
+>El codigo se encuentra **[Aqui](./funciones/funcion5.py)**
 
 ```python
 import random
@@ -223,7 +223,7 @@ print(len(lista1))
 x=abs(int(input("Digita que quintil quieres hallar: ")))
 print(quintiles(lista1,x))
 ```
->El codigo se encuentra [Aqui](./funciones/funcion9.py)|
+>El codigo se encuentra **[Aqui](./funciones/funcion9.py)**
 
 ------
 ## Seguire aprendiendo mas acerca del mundo de python!. Este es solo el principio:earth_africa: :relaxed:
