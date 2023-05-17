@@ -120,8 +120,10 @@ def numMen(lista1,lista2):
 
 lista1=llenarLista(15,25)
 lista2=llenarLista(15,25)
+
 ordenAscen(lista1)
 ordenAscen(lista2)
+
 print("1-Suma de cada lista")
 print("2-Comparar las dos sumas")
 print("3-Promedio Conjunto")

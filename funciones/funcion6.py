@@ -23,8 +23,8 @@ def ordenAscen(lista):
         
 def quintiles(lista,valor):
     quintile=valor*len(lista)/5
-    menor=int(quintile-6)
     mayor=int(quintile)
+    menor=int((valor-1)*len(lista)/5)
     if len(lista)>=quintile:
         listaQuin=lista[menor:mayor]
         return listaQuin
