@@ -43,12 +43,10 @@ def ordenAscen(lista):
     return lista
 
 def promedioConjunto(lista1,lista2):
-    suma=0
-    for x in lista1:
-        suma+=x
-    for x in lista2:
-        suma+=x
-    promedio= suma/(len(lista1)+(len(lista2)))
+    suma1=sumaLista(lista1)
+    suma2=sumaLista(lista2)
+    suma_total=suma1+suma2
+    promedio= suma_total/(len(lista1)+(len(lista2)))
     return promedio
 
 def promedio(lista):
