@@ -226,7 +226,7 @@ print(quintiles(lista1,x))
 >El codigo se encuentra **[Aqui](./funciones/funcion9.py)**
 
 ------
-## Seguire aprendiendo mas acerca del mundo de python!. Este es solo el principio:earth_africa: :relaxed:
+## Seguire aprendiendo mas acerca del mundo de python!. Este es solo el principio:earth_africa::purple_heart:
 
 --------
 #### Puedes apoyar mi trabajo haciendo "☆ Star" en el repo. ¡Gracias!
