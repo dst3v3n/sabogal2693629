@@ -91,11 +91,13 @@ def buscarLista(lista,x):
 def posicion (lista,x):
     posicion=[]
     for i in lista:
-        if i==x:
+        if x==i:
             posicion.append(lista.index(i))
             lista.remove(i)
-            lista.inset(i,15)
-            lista=posicion
+            lista.insert(i,15)
+            print(lista)
+            #lista=posicion
+            #print(posicion)
         return lista
             
 
@@ -110,6 +112,6 @@ print(ordenDesce(lista))
 print(modaLista(lista))
 print(medianaLista(lista))
 num=int(input("Digite un numero: "))
-posicion1=posicion(lista,num)
 print(buscarLista(lista,num))
+posicion1=posicion(lista,num)
 print(posicion1)

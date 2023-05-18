@@ -21,28 +21,33 @@ def ordenAscen(lista):
         
 def quintiles(lista,valor):
     quintile=int(valor*len(lista)/5)
-    if len(lista)%5!=0: 
-        x=lista.index(quintile)
-        y=lista.index(quintile+1)
-        print(x,y)
-        mayor=int((x+y)/2)
-        menor=int((x-1)+(y-1)/2)
-        listaQuin=lista[menor:mayor]
-        return listaQuin
+    print(quintile) 
+    if len(lista)%5!=0:
+        x=lista.pop(quintile)
+        y=lista.pop(quintile+1)
+        z=round(((x+y)/2),2)
+        return z
     else:
-        quintile=valor*len(lista)/5
+        quintile=int(valor*len(lista)/5)
         mayor=int(quintile)
         menor=int((valor-1)*len(lista)/5)
         listaQuin=lista[menor:mayor]
-        return listaQuin
+        return(listaQuin)
+
     
 def Cuartiles(lista,valor):
-    Cuartil=valor*len(lista)/4
-    mayor=int(Cuartil)
-    menor=int((valor-1)*len(lista)/4)
-    if  len(lista)>=Cuartil:
-        listaCuartil=lista[menor:mayor]
-        return listaCuartil
+    quintile=int(valor*len(lista)/4) 
+    if len(lista)%4!=0:
+        x=lista.pop(quintile)
+        y=lista.pop(quintile+1)
+        z=round(x+y/2,2)
+        return z
+    else:
+        quintile=int(valor*len(lista)/4)
+        mayor=int(quintile)
+        menor=int((valor-1)*len(lista)/4)
+        listaQuin=lista[menor:mayor]
+        return(listaQuin)
 
 lista1=llenarLista(125,1.79)
 print(ordenAscen(lista1))
@@ -52,8 +57,8 @@ x=1
 while x!=0:
     x=abs(int(input("Digita que quintil y cuartil quieres hallar: ")))
     if x>=1 and x<=5:
-        print(quintiles(lista1,x))
-        print(Cuartiles(lista1,x))
+        print("Quintiles",quintiles(lista1,x))
+        print("Cuartiles",Cuartiles(lista1,x))
     elif x==0:
         print("Haz salido correctamente del programa")
     else:
