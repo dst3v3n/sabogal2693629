@@ -21,73 +21,82 @@
 | 04  |  [funciones](./funciones)|
 | 05  |  [tuplas](./tuplas)|
 | 06  |  [diccionario](./diccionario)|
+| 07  |  [excepciones](./excepciones)|
 
 --------
 ## **Ultimos codigos realizados** :purple_heart:
 
 ```python
-import random
+def usarEspañol (diccionario , x ):
+    if x in diccionario:
+        return diccionario[x]
 
-def llenarLista(tamaño,rango):
-    tama=random.randint(15,tamaño)
-    lista=[round(random.uniform(1.50,rango),2) for i in range(tama)]   
-    return lista
 
-def ordenAscen(lista):
-    for i in range(len(lista)):
-        for j in range(i+1,len(lista)):
-            if lista[i]>lista[j]:
-                aux=lista[i]
-                lista[i]=lista[j]
-                lista[j]=aux 
-    return lista
-        
-def quintiles(lista,valor):
-    quintile=int(valor*len(lista)/5)
-    print(quintile) 
-    if len(lista)%5!=0:
-        x=lista.pop(quintile)
-        y=lista.pop(quintile+1)
-        z=round(((x+y)/2),2)
-        return z
-    else:
-        quintile=int(valor*len(lista)/5)
-        mayor=int(quintile)
-        menor=int((valor-1)*len(lista)/5)
-        listaQuin=lista[menor:mayor]
-        return(listaQuin)
+def usarIngles (diccionario , x):
+    if x in diccionario:
+        return diccionario[x]
 
-    
-def cuartiles(lista,valor):
-    quintile=int(valor*len(lista)/4) 
-    if len(lista)%4!=0:
-        x=lista.pop(quintile)
-        y=lista.pop(quintile+1)
-        z=round(x+y/2,2)
-        return z
-    else:
-        quintile=int(valor*len(lista)/4)
-        mayor=int(quintile)
-        menor=int((valor-1)*len(lista)/4)
-        listaQuin=lista[menor:mayor]
-        return(listaQuin)
+def updateEspañol(diccio , x , y ):
+    diccio.update({x : y})
+    return diccio
 
-lista1=llenarLista(125,1.79)
-print(ordenAscen(lista1))
-print(len(lista1))
-x=1
+def updateIngles(diccio , x , y):
+    diccio.update({x : y})
+    return diccio
 
-while x!=0:
-    x=abs(int(input("Digita que quintil y cuartil quieres hallar: ")))
-    if x>=1 and x<=5:
-        print("Quintiles",quintiles(lista1,x))
-        print("Cuartiles",cuartiles(lista1,x))
-    elif x==0:
-        print("Haz salido correctamente del programa")
-    else:
-        print("Este numero es invalido")
+
+def tuplaEspañol(tupla,x):
+    tupla = tupla + (x,)
+    print(tupla)
+    return tupla
+
+def tuplaIngles(tupla,x):
+    tupla = tupla + (x,)
+    return tupla
+
+
+español = {}
+ingles={}
+spanish = ()
+english = ()
+
+
+print("1.Mostrar diccionario en Español Ingles")
+print("2.Mostrar diccionario en ingles Español")
+print("3.Agregar diccionario de Español")
+print("4.Agregar diccionario de Ingles")
+print("5.Usar Diccionario de Español")
+print("6.Usar Diccionario de Ingles")
+
+selector = 1
+
+while selector !=0:
+    selector = abs(int(input("Digita una opcion: ")))
+    match selector:
+        case 1:
+            print(español)
+            print(spanish)
+        case 2:
+            print(ingles)
+            print(english)
+        case 3:
+            clave = str(input("Digita la palabra en español que quieres agregar: "))
+            valor = str(input("Digita la palabra en ingles que quieres agregar: "))
+            print(updateEspañol(español,clave,valor))
+            spanish=tuplaEspañol(spanish,clave)
+        case 4:
+            clave = str(input("Digita la palabra en ingles que quieres agregar: "))
+            valor = str(input("Digita la palabra en español que quieres agregar: "))
+            print(updateIngles(ingles,clave, valor))
+            english=tuplaEspañol(english,clave)
+        case 5:
+            x= input("Ingresa la palabra ")
+            print(usarEspañol(español,x))
+        case 6:
+            x= input("Ingresa la palabra ")
+            print(usarIngles(ingles,x)) 
 ```
->El codigo se encuentra **[Aqui](./funciones/funcion7.py)**
+>El codigo se encuentra **[Aqui](./diccionario/diccio5.py)**
 
 ------
 ## Seguire aprendiendo mas acerca del mundo de **python!**. Este es solo el principio:purple_heart:
