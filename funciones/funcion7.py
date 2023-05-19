@@ -35,7 +35,7 @@ def quintiles(lista,valor):
         return(listaQuin)
 
     
-def Cuartiles(lista,valor):
+def cuartiles(lista,valor):
     quintile=int(valor*len(lista)/4) 
     if len(lista)%4!=0:
         x=lista.pop(quintile)
@@ -58,7 +58,7 @@ while x!=0:
     x=abs(int(input("Digita que quintil y cuartil quieres hallar: ")))
     if x>=1 and x<=5:
         print("Quintiles",quintiles(lista1,x))
-        print("Cuartiles",Cuartiles(lista1,x))
+        print("Cuartiles",cuartiles(lista1,x))
     elif x==0:
         print("Haz salido correctamente del programa")
     else:
