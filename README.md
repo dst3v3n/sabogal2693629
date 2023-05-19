@@ -5,11 +5,11 @@
 
 ## Aprendiendo los fundamentos de Python
 
-### El proyecto lo estoy realizando en el SENA. Mi ficha 2693629 ADSO Cadena de Formacion
+### El proyecto lo estoy realizando en el SENA, Estoy realizando un tecnologo en Analisis y Desarrollo de Software (ADSO) :purple_heart: 
 
 --------
 
-### Contenido de los ejercicios con la documentación del proyecto
+>Contenido de los ejercicios con la documentación del proyecto
 
 
 |# Files | Topics                                                    |
@@ -23,7 +23,7 @@
 | 06  |  [diccionario](./diccionario)|
 
 --------
-## **Ultimos codigos realizados**
+## **Ultimos codigos realizados** :purple_heart:
 
 ```python
 import random
