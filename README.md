@@ -110,7 +110,7 @@ while selector !=0:
 ![GitHub Followers](https://img.shields.io/github/followers/dst3v3n?style=social)
 ![GitHub Followers](https://img.shields.io/github/stars/dst3v3n?style=social)
 
-Soy estudiante del SENA desde hace dos año. Este años estoy aprendiendo sobre Analisis y Desarrollo de Software (ADSO) como lo he comentado anteriormente, lo estoy estudiando en el SENA. Quiero seguir aprendiendo mas sobre el mundo del Desarrollo de software **[@dst3v3n](https://github.com/dst3v3n)**.
+Soy estudiante del SENA desde hace dos año. Este años estoy aprendiendo sobre Analisis y Desarrollo de Software (ADSO) como lo he comentado anteriormente. Quiero seguir aprendiendo mas sobre el mundo del Desarrollo de software **[@dst3v3n](https://github.com/dst3v3n)**.
 
 ### En mi perfil de GitHub tienes más información
 
