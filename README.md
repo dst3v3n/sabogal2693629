@@ -5,7 +5,7 @@
 
 ## Aprendiendo los fundamentos de Python
 
-### El proyecto lo estoy realizando en el SENA, Estoy realizando un tecnologo en Analisis y Desarrollo de Software (ADSO) :purple_heart: 
+### El proyecto lo estoy realizando en el SENA. Estoy estudiando un tecnologo en Analisis y Desarrollo de Software (ADSO) :purple_heart: 
 
 --------
 
