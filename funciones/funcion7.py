@@ -25,6 +25,8 @@ def quintiles(lista,valor):
     if len(lista)%5!=0:
         x=lista.pop(quintile)
         y=lista.pop(quintile+1)
+        lista.insert(quintile,x)
+        lista.insert(quintile+1,y)
         z=round(((x+y)/2),2)
         return z
     else:
@@ -36,15 +38,17 @@ def quintiles(lista,valor):
 
     
 def cuartiles(lista,valor):
-    quintile=int(valor*len(lista)/4) 
+    cuartile=int(valor*len(lista)/4) 
     if len(lista)%4!=0:
-        x=lista.pop(quintile)
-        y=lista.pop(quintile+1)
+        x=lista.pop(cuartile)
+        y=lista.pop(cuartile+1)
+        lista.insert(cuartile,x)
+        lista.insert(cuartile+1,y)
         z=round(x+y/2,2)
         return z
     else:
-        quintile=int(valor*len(lista)/4)
-        mayor=int(quintile)
+        cuartile=int(valor*len(lista)/4)
+        mayor=int(cuartile)
         menor=int((valor-1)*len(lista)/4)
         listaQuin=lista[menor:mayor]
         return(listaQuin)
@@ -57,6 +61,8 @@ x=1
 while x!=0:
     x=abs(int(input("Digita que quintil y cuartil quieres hallar: ")))
     if x>=1 and x<=5:
+        print(lista1)
+        print(len(lista1))
         print("Quintiles",quintiles(lista1,x))
         print("Cuartiles",cuartiles(lista1,x))
     elif x==0:
