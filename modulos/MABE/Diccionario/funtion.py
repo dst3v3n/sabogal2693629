@@ -1,5 +1,3 @@
-
-
 def alimentar_diccionario_esp_ingles(diccionarioI):
     palabra_ing = input("Ingrese una palabra en inglés: ")
     palabra_esp = input("Ingrese la traducción de la palabra en español: ")
