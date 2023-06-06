@@ -17,51 +17,131 @@
 | 00  |  [Introducción](./intro/intro1.py)||
 | 01  |  [Condicionales](./condicionales)|
 | 02  |  [Bucles](./bucles)
-| 03  |  [lista](./lista)|
-| 04  |  [funciones](./funciones)|
-| 05  |  [tuplas](./tuplas)|
-| 06  |  [diccionario](./diccionario)|
-| 07  |  [excepciones](./excepciones)|
-| 08  |  [modulos](./modulos)|
-| 09  |  [Pruebas Modulos](./pruebas)|
+| 03  |  [Lista](./lista)|
+| 04  |  [Funciones](./funciones)|
+| 05  |  [Tuplas](./tuplas)|
+| 06  |  [Diccionario](./diccionario)|
+| 07  |  [Excepciones](./excepciones)|
+| 08  |  [Modulos](./modulos)|
+| 09  |  [Objetos](./objetos)|
+| 10  |  [Pruebas Modulos](./pruebas/modulos)|
+| 11  |  [Pruebas Objetos](./pruebas/objetos/)|
 
 --------
 ## **Ultimos codigos realizados** :purple_heart:
 
+>Programación Orientada a Objetos
+
+```python
+class Empleado:
+    counter = 0
+    def __init__(self , Nombre:str , Cargo:str ,Salario:int):
+        self.__nombre = Nombre
+        self.__cargo = Cargo
+        self.__salario = Salario
+        Empleado.counter += 1
+
+    def getNombre (self , Nombre:str):
+        self.__nombre = Nombre
+        
+    def getCargo (self , Cargo:str):
+        self.__cargo = Cargo
+    
+    def getSalario (self , Salario:int):
+        self.__salario = Salario
+
+    def setNombre (self):
+        return self.__nombre
+    
+    def setCargo (self):
+        return self.__cargo
+    
+    def setSalario (self):
+        return self.__salario
+    
+    def Salario_Hora (self):
+        hora = self.__salario/(47*4)
+        return int(hora)
+
+    def incrementoSalario (self):
+        if self.__salario == 1160000:
+            ipc = 0.1312 + 0.03
+            incremento = self.__salario * ipc
+            total_incremento = self.__salario + incremento
+            return int(total_incremento)
+        else: 
+            total_incremento = self.__salario * 0.1312
+            return int(total_incremento)
+        
+    def hora_extras (self, Horas:int =0):
+        incremento = Empleado.incrementoSalario(self)
+        salario = Empleado.Salario_Hora(self)
+        extras = salario * Horas
+        total = incremento + extras
+        return int(total)
+```
+>El codigo se encuentra **[Aqui](./objetos/Empleado.py)**
+
+
+
 ```python
 from sys import path
 
-path.append("..\\sabogal2693629\\modulos")
-# path.append("C:\sabogal2693629\modulos"
+path.append("..\\sabogal2693629")
+
+from objetos.Empleado import *
+
+persona1 = Empleado ("Harold" , "ADSO" , 120000)
+
+persona1.getNombre ("Steven")
+persona1.getCargo ("Multimedia")
+persona1.getSalario (1160000)
+
+print(persona1.setNombre())
+print(persona1.setCargo())
+print(persona1.setSalario())
+
+print(persona1.Salario_Hora())
+print(persona1.incrementoSalario())
+print(persona1.hora_extras(2))
 
 
-import slz.listas.lista_slz as slzlista
-import slz.diccionario.diccio_slz as slzdiccio
 
-lista=slzlista.llenarLista(10,20)
-print(lista)
 
-diccio = {}
-x = input("Digita la palabra clave: ")
-y = input("Digita el valor: ")
-print(slzdiccio.updateIngles(diccio,x,y))
+persona2 = Empleado ("Jhonatan" , "Multimedia" , 120000)
+
+persona2.getNombre ("Sabogal")
+persona2.getCargo ("Sistemas")
+persona2.getSalario (2460000)
+
+print(persona2.setNombre())
+print(persona2.setCargo())
+print(persona2.setSalario())
+
+print(persona2.Salario_Hora())
+print(persona2.incrementoSalario())
+print(persona2.hora_extras(1))
+
+
+
+
+persona3 = Empleado ("Jhonatan" , "Multimedia" , 5000000)
+
+persona3.getNombre ("Sabogal")
+persona3.getCargo ("Sistemas")
+persona3.getSalario (5500000)
+
+print(persona3.setNombre())
+print(persona3.setCargo())
+print(persona3.setSalario())
+
+print(persona3.Salario_Hora())
+print(persona3.incrementoSalario())
+print(persona3.hora_extras())
+
+print(persona3.counter)
 ```
->El codigo se encuentra **[Aqui](./pruebas/prueba1.py)**
-
-
-```python
-from sys import path
-
-path.append("..\\sabogal2693629\\modulos")
-
-import MABE.Diccionario.funtion as mabe_diccio
-import MABE.Listas.funcion as mabe_lista
-
-diccio = {}
-print(mabe_diccio.alimentar_diccionario_esp_ingles(diccio))
-print(mabe_lista.llenarLista(20,35))
-```
->El codigo se encuentra **[Aqui](./pruebas/prueba2.py)**
+>El codigo se encuentra **[Aqui](./pruebas/objetos/EmpleadoAPP.py)**
 
 ------
 ## Seguire aprendiendo mas acerca del mundo de **python!**. Este es solo el principio:purple_heart:

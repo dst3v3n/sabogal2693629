@@ -1,4 +1,8 @@
-from Persona import *
+from sys import path
+
+path.append("..\\sabogal2693629")
+
+from objetos.Persona import *
 
 ob1 = Persona("Harold",102866)
 
