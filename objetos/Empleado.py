@@ -15,16 +15,19 @@ class Empleado:
     
     def getSalario (self , Salario:int):
         self.__salario = Salario
-
+    
+    @property
     def setNombre (self):
         return self.__nombre
     
+    @property
     def setCargo (self):
         return self.__cargo
     
+    @property
     def setSalario (self):
         return self.__salario
-    
+
     def Salario_Hora (self):
         hora = self.__salario/(47*4)
         return int(hora)

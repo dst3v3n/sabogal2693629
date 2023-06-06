@@ -50,16 +50,19 @@ class Empleado:
     
     def getSalario (self , Salario:int):
         self.__salario = Salario
-
+    
+    @property
     def setNombre (self):
         return self.__nombre
     
+    @property
     def setCargo (self):
         return self.__cargo
     
+    @property
     def setSalario (self):
         return self.__salario
-    
+
     def Salario_Hora (self):
         hora = self.__salario/(47*4)
         return int(hora)
@@ -106,9 +109,9 @@ persona1.getNombre ("Steven")
 persona1.getCargo ("Multimedia")
 persona1.getSalario (1160000)
 
-print(persona1.setNombre())
-print(persona1.setCargo())
-print(persona1.setSalario())
+print(persona1.setNombre)
+print(persona1.setCargo)
+print(persona1.setSalario)
 
 print(persona1.Salario_Hora())
 print(persona1.incrementoSalario())
@@ -124,9 +127,9 @@ persona2.getNombre ("Sabogal")
 persona2.getCargo ("Sistemas")
 persona2.getSalario (2460000)
 
-print(persona2.setNombre())
-print(persona2.setCargo())
-print(persona2.setSalario())
+print(persona2.setNombre)
+print(persona2.setCargo)
+print(persona2.setSalario)
 
 print(persona2.Salario_Hora())
 print(persona2.incrementoSalario())
@@ -142,9 +145,9 @@ persona3.getNombre ("Sabogal")
 persona3.getCargo ("Sistemas")
 persona3.getSalario (5500000)
 
-print(persona3.setNombre())
-print(persona3.setCargo())
-print(persona3.setSalario())
+print(persona3.setNombre)
+print(persona3.setCargo)
+print(persona3.setSalario)
 
 print(persona3.Salario_Hora())
 print(persona3.incrementoSalario())
