@@ -89,7 +89,7 @@ class Empleado:
 >El codigo se encuentra **[Aqui](./objetos/Empleado.py)**
 
 --------
->Indentación del objeto
+>Instanciando los objetos
 
 
 
