@@ -39,6 +39,7 @@ class Empleado:
         self.__nombre = Nombre
         self.__cargo = Cargo
         self.__salario = Salario
+        self.__horas = 0
         Empleado.counter += 1
 
     def getNombre (self , Nombre:str):
@@ -74,13 +75,21 @@ class Empleado:
             return int(total_incremento)
         
     def hora_extras (self, Horas:int =0):
+        self.__horas = Horas
         incremento = Empleado.incrementoSalario(self)
         salario = Empleado.Salario_Hora(self)
         extras = salario * Horas
         total = incremento + extras
         return int(total)
+    
+    def sueldo_total (self):
+        total = Empleado.hora_extras(self , self.__horas)
+        return total
 ```
 >El codigo se encuentra **[Aqui](./objetos/Empleado.py)**
+
+--------
+>Indentación del objeto
 
 
 
@@ -104,6 +113,7 @@ print(persona1.setSalario())
 print(persona1.Salario_Hora())
 print(persona1.incrementoSalario())
 print(persona1.hora_extras(2))
+print(persona1.sueldo_total())
 
 
 
@@ -121,6 +131,7 @@ print(persona2.setSalario())
 print(persona2.Salario_Hora())
 print(persona2.incrementoSalario())
 print(persona2.hora_extras(1))
+print(persona2.sueldo_total())
 
 
 
@@ -137,7 +148,7 @@ print(persona3.setSalario())
 
 print(persona3.Salario_Hora())
 print(persona3.incrementoSalario())
-print(persona3.hora_extras())
+print(persona3.sueldo_total())
 
 print(persona3.counter)
 ```

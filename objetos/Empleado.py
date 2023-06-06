@@ -4,6 +4,7 @@ class Empleado:
         self.__nombre = Nombre
         self.__cargo = Cargo
         self.__salario = Salario
+        self.__horas = 0
         Empleado.counter += 1
 
     def getNombre (self , Nombre:str):
@@ -39,8 +40,13 @@ class Empleado:
             return int(total_incremento)
         
     def hora_extras (self, Horas:int =0):
+        self.__horas = Horas
         incremento = Empleado.incrementoSalario(self)
         salario = Empleado.Salario_Hora(self)
         extras = salario * Horas
         total = incremento + extras
         return int(total)
+    
+    def sueldo_total (self):
+        total = Empleado.hora_extras(self , self.__horas)
+        return total

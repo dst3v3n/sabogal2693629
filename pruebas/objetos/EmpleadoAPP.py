@@ -17,6 +17,7 @@ print(persona1.setSalario())
 print(persona1.Salario_Hora())
 print(persona1.incrementoSalario())
 print(persona1.hora_extras(2))
+print(persona1.sueldo_total())
 
 
 
@@ -34,6 +35,7 @@ print(persona2.setSalario())
 print(persona2.Salario_Hora())
 print(persona2.incrementoSalario())
 print(persona2.hora_extras(1))
+print(persona2.sueldo_total())
 
 
 
@@ -50,6 +52,6 @@ print(persona3.setSalario())
 
 print(persona3.Salario_Hora())
 print(persona3.incrementoSalario())
-print(persona3.hora_extras())
+print(persona3.sueldo_total())
 
 print(persona3.counter)
