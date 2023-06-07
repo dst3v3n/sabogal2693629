@@ -7,25 +7,25 @@ class Empleado:
         self.__horas = 0
         Empleado.counter += 1
 
-    def getNombre (self , Nombre:str):
+    def setNombre (self , Nombre:str):
         self.__nombre = Nombre
         
-    def getCargo (self , Cargo:str):
+    def setCargo (self , Cargo:str):
         self.__cargo = Cargo
     
-    def getSalario (self , Salario:int):
+    def setSalario (self , Salario:int):
         self.__salario = Salario
     
     @property
-    def setNombre (self):
+    def getNombre (self):
         return self.__nombre
     
     @property
-    def setCargo (self):
+    def getCargo (self):
         return self.__cargo
     
     @property
-    def setSalario (self):
+    def getSalario (self):
         return self.__salario
 
     def Salario_Hora (self):
