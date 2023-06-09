@@ -12,9 +12,6 @@ class User:
         Account.__init__ (self, self.__reservado , self.__devueltos)
         Book.__init__ (self,"La Guerra De Los Cielos" , "Fernando Trujillo" ,9789583060502 , "10/02/2021", "Disponible")
 
-    # def retornos (self, Titulos:)
-
-
     def setNombre (self, Nombre:str):
         self.__name = Nombre
     
@@ -46,4 +43,6 @@ class User:
             return self.__reservado, self.__devueltos, self.__multa
     
     def get_book_info(self,Titulo):
-        Book.renw_info(self,Titulo)
+        obj1 = Book (Book.get_titulos , Book.get_autors , Book.get_isbn , Book.get_isbn, Book.reservation_status)
+        obj1.append_duet (Titulo, "Cesar Garcia")
+        obj1.renw_info (Titulo)

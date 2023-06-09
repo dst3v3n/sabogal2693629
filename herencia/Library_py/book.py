@@ -5,7 +5,7 @@ class Book:
         self.__autor = Autor
         self.__isbn = ISBN
         self.__publicacion = Publicacion
-        self.__duet = {Titulo : [Autor]}
+        self.__duet = {Titulo : []}
         self.__status = Status
         self.__comentario = {Titulo: None}
         
@@ -17,8 +17,16 @@ class Book:
         return self.__titulo_autor.keys()
     
     @property
+    def get_titulos(self):
+        return self.__titulo_autor.keys()
+    
+    @property
     def get_autor(self):
-        return self.__titulo_autor.values ()
+        return self.__titulo
+    
+    @property
+    def get_autors(self):
+        return self.__autor
 
     def  set_isbn(self,isbn):
         self.__isbn = isbn
@@ -34,7 +42,7 @@ class Book:
         return self.__publicacion
     
     def append_duet (self , Titulo:str , Autor:str):
-        if Titulo in self.__titulo:
+        if Titulo in self.__titulo_autor:
             self.__duet.update ({self.__titulo : [self.__autor , Autor]})
             return self.__duet
 
@@ -64,4 +72,4 @@ class Book:
                     
     def renw_info (self, Titulo):
         if Titulo in self.__titulo_autor:
-            print (self.__titulo_autor, self.__isbn , self.__publicacion , self.__status)
+            print (self.__titulo_autor, self.__isbn , self.__duet, self.__publicacion , self.__status)
