@@ -1,26 +1,24 @@
 class Book:
     def __init__(self, Titulo:str, Autor:str , ISBN:int , Publicacion:str , Status:str):
-        self.__autor = Autor
+        self.__titulo_autor ={Titulo:Autor}
         self.__titulo = Titulo
+        self.__autor = Autor
         self.__isbn = ISBN
         self.__publicacion = Publicacion
-        self.__duet = {Titulo : Autor}
+        self.__duet = {Titulo : [Autor]}
         self.__status = Status
         self.__comentario = {Titulo: None}
-
-    def set_titulo(self,titulo):
-        self.__titulo = titulo
+        
+    def set_titulo(self,titulo:str , Autor:str):
+        self.__titulo_autor.update({titulo:Autor})              
 
     @property
     def get_titulo(self):
-        return self.__titulo
-    
-    def set_autor(self,autor):
-        self.__autor=autor
+        return self.__titulo_autor.keys()
     
     @property
     def get_autor(self):
-        return self.__autor
+        return self.__titulo_autor.values ()
 
     def  set_isbn(self,isbn):
         self.__isbn = isbn
@@ -36,9 +34,9 @@ class Book:
         return self.__publicacion
     
     def append_duet (self , Titulo:str , Autor:str):
-        if Titulo in self.__duet:
-            self.__duet.update({self.__titulo: (self.__autor , Autor)})
-            print(self.__duet)
+        if Titulo in self.__titulo:
+            self.__duet.update ({self.__titulo : [self.__autor , Autor]})
+            return self.__duet
 
     def reservation_status(self, Titulo):
         if Titulo in self.__titulo:
@@ -65,9 +63,5 @@ class Book:
                         return "No ha sido resevado"
                     
     def renw_info (self, Titulo):
-        if Titulo in self.__duet:
-            values =list(self.__duet[Titulo])
-            if len(values)>1:
-                return self.__titulo , self.__autor , self.__isbn , self.__publicacion ,values, self.__status
-            else:
-                return self.__titulo , self.__autor , self.__isbn , self.__publicacion , self.__status 
+        if Titulo in self.__titulo_autor:
+            print (self.__titulo_autor, self.__isbn , self.__publicacion , self.__status)
