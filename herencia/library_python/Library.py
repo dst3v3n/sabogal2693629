@@ -11,3 +11,6 @@ class Library :
 
     def getTitulo (self):
         return self.__titulo
+    
+    def agregarLibro (self,isbn,titulo):
+        self.__titulo.append (titulo)
