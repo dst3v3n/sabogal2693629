@@ -14,7 +14,7 @@ class Account:
         self._perdido = []
         self._libros = []
         self.__multa = 0
-        self.__no_perdido = 0
+        self._no_perdido = 0
         self._obj_titulo1 = {Name : []}
         Book.__init__ (self,"La llorona" , "Harold" , 102866 , "10/25/2014" , Name)
 
@@ -22,5 +22,6 @@ class Account:
         self.__no_perdido = Numero
         
     def calculate_fine (self , numero):
-        self.__multa = (1160000 * 0.3) * numero
-        return int(self.__multa)
+        self.__multa = (1160000 * 0.3) * self._no_perdido
+        print(self._no_perdido)
+        # print(int(self.__multa))
