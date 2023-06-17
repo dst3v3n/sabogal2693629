@@ -17,8 +17,9 @@ obj1.LibroPerdido("Harold", "La Guerra de los cielos")
 obj1.LibroPerdido("Harold", "La guerra de los cielos")
 obj1.LibroPerdido("Harold", "La guerra de los cielos")
 
-print("multa",obj3.calculate_fine(len(obj1._perdido)))
+obj3.setMulta (5)
+print("multa",obj3.calculate_fine())
 
 print(obj1.CheckAccount("Harold"))
 
-# print(obj2.AgregarBook())
+obj1.get_book_info ("La llorona" , obj2._informacion)

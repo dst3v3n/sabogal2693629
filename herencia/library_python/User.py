@@ -47,6 +47,6 @@ class User(Account):
     def CheckAccount (self, Name:str):
         return self._obj_titulo1[Name]
         
-    # def get_book_info (self , Titulo:str , informacion):
-    #     self.__informacion = informacion
-    #     print(self.__informacion)
+    def get_book_info (self , Titulo:str , informacion):
+        self.__informacion = informacion
+        print(self.__informacion[Titulo])
