@@ -2,21 +2,28 @@ from sys import path
 
 path.append("..\\sabogal2693629")
 
-from herencia.Library_py.book import *
-from herencia.Library_py.User import *
-from herencia.Library_py.Account import *
+from herencia.library_python.Book import *
+from herencia.library_python.Account import *
+from herencia.library_python.User import *
 
 
-prueba1 = Book("La Guerra De Los Cielos" , "Fernando Trujillo" , 9789583060502 , "10/02/2021", "Disponible")
-prueba2 = User ("Harold" , 10)
-prueba3 = Account ("La Guerra De Los Cielos" , "Mundo")
+obj2 = Book ("La llorona" , "Harold" , 102866 , "10/25/2014" , "Harold")
+obj1 = User ("Harold" , 102866)
+obj3 = Account ("Harold" , 102866)
 
-print(prueba1.append_duet ("La Guerra De Los Cielos" , "Cesar Garcia"))
-print(prueba1.reservation_status ("La Guerra De Los Cielos"))
-prueba1.feedback("La Guerra De Los Cielos")
-print(prueba1.Book_request("La Guerra De Los Cielos"))
-prueba1.renw_info("La Guerra De Los Cielos")
 
-print(prueba2.verify("Harold", 10))
-print(prueba2.CheckAcount("Harold" , 10))
-prueba2.get_book_info("La Guerra De Los Cielos")
+obj1.LibroReservado("Harold","La llorona")
+obj1.LibroReservado("Harold","La guerra de los cielos" )
+obj1.LibroDevuelto("Harold","La llorona")
+obj1.LibroDevuelto("Harold","La guerra de los cielos")
+obj1.LibroPerdido("Harold"," La llorona")
+obj1.LibroPerdido("Harold", "La Guerra de los cielos")
+obj1.LibroPerdido("Harold", "La guerra de los cielos")
+obj1.LibroPerdido("Harold", "La guerra de los cielos")
+
+obj3.setMulta (5)
+print("multa",obj3.calculate_fine())
+
+print(obj1.CheckAccount("Harold"))
+
+obj1.get_book_info ("La llorona" , obj2._informacion)

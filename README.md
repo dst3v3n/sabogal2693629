@@ -24,8 +24,10 @@
 | 07  |  [Excepciones](./excepciones)|
 | 08  |  [Modulos](./modulos)|
 | 09  |  [Objetos](./objetos)|
-| 10  |  [Pruebas Modulos](./pruebas/modulos)|
-| 11  |  [Pruebas Objetos](./pruebas/objetos/)|
+| 10  |  [Herencia](./herencia)|
+| 11  |  [Ejercicio Herencia](./herencia/library_python)|
+| 12  |  [Pruebas Modulos](./pruebas/modulos)|
+| 13  |  [Pruebas Objetos](./pruebas/objetos/)|
 
 --------
 ## **Ultimos codigos realizados** :purple_heart:
@@ -33,66 +35,63 @@
 >Programación Orientada a Objetos
 
 ```python
-class Empleado:
-    counter = 0
-    def __init__(self , Nombre:str , Cargo:str ,Salario:int):
-        self.__nombre = Nombre
-        self.__cargo = Cargo
-        self.__salario = Salario
-        self.__horas = 0
-        Empleado.counter += 1
+from sys import path
 
-    def setNombre (self , Nombre:str):
-        self.__nombre = Nombre
+path.append("..\\sabogal2693629")
+
+from herencia.library_python.Account import *
+from herencia.library_python.Book import *
+
+
+class User(Account):
+    def __init__(self , Name:str , ID:int):
+        self._name = Name
+        self.__id = ID
+        self.__verificado = None
+        Account.__init__(self , Name , ID)
+        Book.__init__(self , "La llorona" , "Harold" , 102866 , "10/25/2014" , "Harold")
+
+    def verify (self , Name:str, ID:int):
+        if self._name == Name and self.__id == ID:
+            self.__verificado = "Verificado"
+            return "Verificado"
+        else:
+            self.__verificado = "No Verificado"
+            return "No Verificado"
+            
+    def LibroReservado (self ,Name:str , Titulo:str):
+        self._reservado.append(Titulo)
+        self._libros.append (Titulo)
+        del self._obj_titulo1[Name]
+        self._obj_titulo1.update ({Name : self._libros + [Titulo]})
+        Book.Obj_Libro(self,Name,Titulo)
         
-    def setCargo (self , Cargo:str):
-        self.__cargo = Cargo
-    
-    def setSalario (self , Salario:int):
-        self.__salario = Salario
-    
-    @property
-    def getNombre (self):
-        return self.__nombre
-    
-    @property
-    def getCargo (self):
-        return self.__cargo
-    
-    @property
-    def getSalario (self):
-        return self.__salario
-
-    def Salario_Hora (self):
-        hora = self.__salario/(47*4)
-        return int(hora)
-
-    def incrementoSalario (self):
-        if self.__salario == 1160000:
-            ipc = 0.1312 + 0.03
-            incremento = self.__salario * ipc
-            total_incremento = self.__salario + incremento
-            return int(total_incremento)
-        else: 
-            total_incremento = self.__salario * 0.1312
-            return int(total_incremento)
+    def LibroDevuelto (self ,Name:str , Titulo:str):
+        self._devuelto.append(Titulo)
+        self._libros.append (Titulo)
+        del self._obj_titulo1[Name]
+        self._obj_titulo1.update ({Name : self._libros + [Titulo]})
+        Book.Obj_Libro(self,Name,Titulo)
         
-    def hora_extras (self, Horas:int =0):
-        self.__horas = Horas
-        incremento = Empleado.incrementoSalario(self)
-        salario = Empleado.Salario_Hora(self)
-        extras = salario * Horas
-        total = incremento + extras
-        return int(total)
-    
-    def sueldo_total (self):
-        total = Empleado.hora_extras(self , self.__horas)
-        return total
+    def LibroPerdido (self , Name:str, Titulo:str):
+        self._perdido.append(Titulo)
+        self._libros.append (Titulo)
+        del self._obj_titulo1[Name]
+        self._obj_titulo1.update ({Name : self._libros + [Titulo]})
+        Book.Obj_Libro(self,Name,Titulo)
+        self.setMulta(len(self._perdido))
+
+    def CheckAccount (self, Name:str):
+        return self._obj_titulo1[Name]
+        
+    def get_book_info (self , Titulo:str , informacion):
+        self.__informacion = informacion
+        print(self.__informacion[Titulo])
 ```
->El codigo se encuentra **[Aqui](./objetos/Empleado.py)**
+>El codigo se encuentra **[Aqui](./herencia/library_python/User.py)**
 
 --------
->Instanciando los objetos
+>App Libreria
 
 
 
@@ -101,60 +100,33 @@ from sys import path
 
 path.append("..\\sabogal2693629")
 
-from objetos.Empleado import *
-
-persona1 = Empleado ("Harold" , "ADSO" , 120000)
-
-persona1.setNombre ("Steven")
-persona1.setCargo ("Multimedia")
-persona1.setSalario (1160000)
-
-print(f"Tu nombre es: {persona1.getNombre}")
-print(f"Tu cargo es: {persona1.getCargo}")
-print(f"Tu salario es: {persona1.getSalario}")
-
-print(f"Tu salario por hora es: {persona1.Salario_Hora()}")
-print(f"Tu incremento salarial es de: {persona1.incrementoSalario()}")
-print(f"Tu incremento salarial por las hora extras es de :{persona1.hora_extras(1)}")
-print(f"Tu sueldo es de: {persona1.sueldo_total()}")
+from herencia.library_python.Book import *
+from herencia.library_python.Account import *
+from herencia.library_python.User import *
 
 
+obj2 = Book ("La llorona" , "Harold" , 102866 , "10/25/2014" , "Harold")
+obj1 = User ("Harold" , 102866)
+obj3 = Account ("Harold" , 102866)
 
 
-persona2 = Empleado ("Jhonatan" , "Multimedia" , 120000)
+obj1.LibroReservado("Harold","La llorona")
+obj1.LibroReservado("Harold","La guerra de los cielos" )
+obj1.LibroDevuelto("Harold","La llorona")
+obj1.LibroDevuelto("Harold","La guerra de los cielos")
+obj1.LibroPerdido("Harold"," La llorona")
+obj1.LibroPerdido("Harold", "La Guerra de los cielos")
+obj1.LibroPerdido("Harold", "La guerra de los cielos")
+obj1.LibroPerdido("Harold", "La guerra de los cielos")
 
-persona2.setNombre ("Sabogal")
-persona2.setCargo ("Sistemas")
-persona2.setSalario (2460000)
+obj3.setMulta (5)
+print("multa",obj3.calculate_fine())
 
-print(f"Tu nombre es: {persona2.getNombre}")
-print(f"Tu cargo es: {persona2.getCargo}")
-print(f"Tu salario es: {persona2.getSalario}")
+print(obj1.CheckAccount("Harold"))
 
-print(f"Tu salario por hora es: {persona2.Salario_Hora()}")
-print(f"Tu incremento salarial es de: {persona2.incrementoSalario()}")
-print(f"Tu incremento salarial por las hora extras es de :{persona2.hora_extras(2)}")
-print(f"Tu sueldo es de: {persona2.sueldo_total()}")
-
-
-
-persona3 = Empleado ("Jhonatan" , "Multimedia" , 5000000)
-
-persona3.setNombre ("Sabogal")
-persona3.setCargo ("Sistemas")
-persona3.setSalario (5500000)
-
-print(f"Tu nombre es: {persona3.getNombre}")
-print(f"Tu cargo es: {persona3.getCargo}")
-print(f"Tu salario es: {persona3.getSalario}")
-
-print(f"Tu salario por hora es: {persona3.Salario_Hora()}")
-print(f"Tu incremento salarial es de: {persona3.incrementoSalario()}")
-print(f"Tu sueldo es de: {persona3.sueldo_total()}")
-
-print(persona3.counter)
+obj1.get_book_info ("La llorona" , obj2._informacion)
 ```
->El codigo se encuentra **[Aqui](./pruebas/objetos/EmpleadoAPP.py)**
+>El codigo se encuentra **[Aqui](./pruebas/objetos/LibraryAPP.py)**
 
 ------
 ## Seguire aprendiendo mas acerca del mundo de **python!**. Este es solo el principio:purple_heart:
