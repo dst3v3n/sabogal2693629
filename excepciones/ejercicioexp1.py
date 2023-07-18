@@ -29,6 +29,6 @@ def Cuadratica ():
     except TypeError:
         print("No se puede sacar raiz de numero negativos")
     except:
-        print("ohh... ah ocurrido un error!!")
+        print("ohh... ah ocurrido un error!. Buscalo!")
 
 Cuadratica ()
